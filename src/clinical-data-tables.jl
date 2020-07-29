@@ -1,5 +1,10 @@
 import Dates
+import DocStringExtensions
 
+"""
+$(DocStringExtensions.TYPEDEF)
+$(DocStringExtensions.TYPEDFIELDS)
+"""
 Base.@kwdef struct Person <: OmopType
     person_id::Int
     gender_concept_id::Int
