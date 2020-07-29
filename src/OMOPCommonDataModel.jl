@@ -4,7 +4,6 @@ import Dates
 import DocStringExtensions
 
 export COMMON_DATA_MODEL_VERSION
-export OmopType
 
 abstract type OmopType end
 
