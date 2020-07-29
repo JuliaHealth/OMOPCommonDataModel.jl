@@ -65,7 +65,7 @@ Person(
 julia> person_table = StructArray([jack, jill])
 2-element StructArray(::Vector{Int64}, ::Vector{Int64}, ::Vector{Int64}, ::Vector{Union{Missing, Int64}}, ::Vector{Union{Missing, Int64}}, ::Vector{Union{Missing, Dates.DateTime}}, ::Vector{Union{Missing, Dates.DateTime}}, ::Vector{Int64}, ::Vector{Int64}, ::Vector{Union{Missing, Int64}}, ::Vector{Union{Missing, Int64}}, ::Vector{Union{Missing, Int64}}, ::Vector{Union{Missing, String}}, ::Vector{Union{Missing, String}}, ::Vector{Int64}, ::Vector{Union{Missing, String}}, ::Vector{Int64}, ::Vector{Union{Missing, String}}, ::Vector{Int64}) with eltype Person:
  Person(1, 12, 1900, missing, missing, missing, missing, 21, 31, missing, missing, missing, missing, missing, 42, missing, 51, missing, 61)
- Person(2, 11, 1900, 1, 1, missing, missing, 22, 32, missing, missing, missing, missing, missing, 41, missing, 52, missing, 62)
+ Person(2, 11, 1900, 1, 1, missing, missing, 22, 32, missing, missing, missing, missing, missing, 41, missing, 52, missing, 620)
 ```
 
 ```@index
