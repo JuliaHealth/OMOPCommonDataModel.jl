@@ -66,4 +66,4 @@ include("derived-elements.jl")
 # export CohortDefinition
 include("results-schema.jl")
 
-end
+end # end module OMOPCommonDataModel
