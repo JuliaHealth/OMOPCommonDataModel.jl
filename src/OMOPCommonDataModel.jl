@@ -2,9 +2,15 @@ module OMOPCommonDataModel
 
 import Dates
 
+export COMMON_DATA_MODEL_VERSION
 export OmopType
 
 abstract type OmopType end
+
+"""
+The version of the OMOP Common Data Model (CDM) being implemented.
+"""
+const COMMON_DATA_MODEL_VERSION = v"6.0.0"
 
 # Standardized Vocabularies
 # export Concept
