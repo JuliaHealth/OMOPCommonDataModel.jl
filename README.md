@@ -5,4 +5,6 @@
 [![Build Status](https://github.com/JuliaHealth/OMOPCommonDataModel.jl/workflows/CI/badge.svg)](https://github.com/JuliaHealth/OMOPCommonDataModel.jl/actions)
 [![Coverage](https://codecov.io/gh/JuliaHealth/OMOPCommonDataModel.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/JuliaHealth/OMOPCommonDataModel.jl)
 
-Pure Julia implementation of the [OMOP Common Data Model (CDM)](https://github.com/OHDSI/CommonDataModel) version 6.0.
+Pure Julia implementation of the [OMOP Common Data Model (CDM)](https://github.com/OHDSI/CommonDataModel).
+
+Please see the [documentation](https://JuliaHealth.github.io/OMOPCommonDataModel.jl/stable).
