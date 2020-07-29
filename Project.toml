@@ -3,11 +3,19 @@ uuid = "ba65db9e-6590-4054-ab8a-101ed9124986"
 authors = ["Dilum Aluthge", "Brown Center for Biomedical Informatics", "JuliaHealth", "and contributors"]
 version = "0.1.0-DEV"
 
+[deps]
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+
 [compat]
+PrettyPrint = "0.1"
+StructArrays = "0.4"
 julia = "1.1"
 
 [extras]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+PrettyPrint = "8162dcfd-2161-5ef2-ae6c-7681170c5f98"
+StructArrays = "09ab397b-f2b6-538f-b94a-2f83cf4a842a"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [targets]
-test = ["Test"]
+test = ["Documenter", "PrettyPrint", "StructArrays", "Test"]

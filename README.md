@@ -4,3 +4,5 @@
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://JuliaHealth.github.io/OMOPCommonDataModel.jl/dev)
 [![Build Status](https://github.com/JuliaHealth/OMOPCommonDataModel.jl/workflows/CI/badge.svg)](https://github.com/JuliaHealth/OMOPCommonDataModel.jl/actions)
 [![Coverage](https://codecov.io/gh/JuliaHealth/OMOPCommonDataModel.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/JuliaHealth/OMOPCommonDataModel.jl)
+
+A pure Julia implementation of the OMOP Common Data Model version 6.0.
