@@ -1,6 +1,7 @@
 module OMOPCommonDataModel
 
 import Dates
+import DocStringExtensions
 
 export OmopType
 
