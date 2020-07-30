@@ -16,4 +16,5 @@ In order to see the current CDM version, use the `OMOPCommonDataModel.CDM_VERSIO
 julia> using OMOPCommonDataModel
 
 julia> OMOPCommonDataModel.CDM_VERSION
+v"6.0.0"
 ```
