@@ -26,3 +26,15 @@ Base.@kwdef struct Person <: OmopType
     ethnicity_source_value::Union{Missing, String} = missing
     ethnicity_source_concept_id::Int
 end
+
+"""
+$(DocStringExtensions.TYPEDEF)
+$(DocStringExtensions.TYPEDFIELDS)
+"""
+Base.@kwdef struct ObservationPeriod <: OmopType
+    observation_period_id::Int
+    person_id::Int
+    observation_period_start_date::Dates.DateTime
+    observation_period_end_date::Dates.DateTime
+    period_type_concept_id::Int
+end

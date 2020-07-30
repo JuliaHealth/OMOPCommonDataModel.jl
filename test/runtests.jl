@@ -8,6 +8,10 @@ using Test
 
 @testset "OMOPCommonDataModel.jl" begin
     @testset "Unit tests" begin
+        @testset "Required fields" begin
+            @test_throws UndefKeywordError ObservationPeriod()
+            @test_throws UndefKeywordError Person()
+        end
     end
     @testset "Doctests" begin
         doctest(OMOPCommonDataModel)

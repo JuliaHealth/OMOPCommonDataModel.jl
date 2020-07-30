@@ -32,7 +32,7 @@ include("metadata.jl")
 
 # Standardized Clinical Data Tables
 export Person
-# export ObservationPeriod
+export ObservationPeriod
 # export Death
 # export VisitOccurence
 # export VisitDetail
