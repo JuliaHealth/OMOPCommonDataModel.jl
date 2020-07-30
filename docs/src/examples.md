@@ -66,11 +66,13 @@ julia> person_table = StructArray(Person[jack, jill])
  Person(1, 12, 1900, missing, missing, missing, missing, 21, 31, missing, missing, missing, missing, missing, 42, missing, 51, missing, 61)
  Person(2, 11, 1900, 1, 1, missing, missing, 22, 32, missing, missing, missing, missing, missing, 41, missing, 52, missing, 62)
 
-julia> person_table_df = DataFrame(person_table)
-2×19 DataFrame. Omitted printing of 9 columns
-│ Row │ person_id │ gender_concept_id │ year_of_birth │ month_of_birth │ day_of_birth │ birth_datetime │ death_datetime │ race_concept_id │ ethnicity_concept_id │ location_id │
-│     │ Int64     │ Int64             │ Int64         │ Int64?         │ Int64?       │ DateTime…?     │ DateTime…?     │ Int64           │ Int64                │ Int64?      │
-├─────┼───────────┼───────────────────┼───────────────┼────────────────┼──────────────┼────────────────┼────────────────┼─────────────────┼──────────────────────┼─────────────┤
-│ 1   │ 1         │ 12                │ 1900          │ missing        │ missing      │ missing        │ missing        │ 21              │ 31                   │ missing     │
-│ 2   │ 2         │ 11                │ 1900          │ 1              │ 1            │ missing        │ missing        │ 22              │ 32                   │ missing     │
+julia> person_table_df = DataFrame(person_table);
+
+julia> @show person_table_df;
+person_table_df = 2×19 DataFrame
+│ Row │ person_id │ gender_concept_id │ year_of_birth │ month_of_birth │ day_of_birth │ birth_datetime │ death_datetime │ race_concept_id │ ethnicity_concept_id │ location_id │ provider_id │ care_site_id │ person_source_value │ gender_source_value │ gender_source_concept_id │ race_source_value │ race_source_concept_id │ ethnicity_source_value │ ethnicity_source_concept_id │
+│     │ Int64     │ Int64             │ Int64         │ Int64?         │ Int64?       │ DateTime…?     │ DateTime…?     │ Int64           │ Int64                │ Int64?      │ Int64?      │ Int64?       │ String?             │ String?             │ Int64                    │ String?           │ Int64                  │ Union{Missing, String} │ Int64                       │
+├─────┼───────────┼───────────────────┼───────────────┼────────────────┼──────────────┼────────────────┼────────────────┼─────────────────┼──────────────────────┼─────────────┼─────────────┼──────────────┼─────────────────────┼─────────────────────┼──────────────────────────┼───────────────────┼────────────────────────┼────────────────────────┼─────────────────────────────┤
+│ 1   │ 1         │ 12                │ 1900          │ missing        │ missing      │ missing        │ missing        │ 21              │ 31                   │ missing     │ missing     │ missing      │ missing             │ missing             │ 42                       │ missing           │ 51                     │ missing                │ 61                          │
+│ 2   │ 2         │ 11                │ 1900          │ 1              │ 1            │ missing        │ missing        │ 22              │ 32                   │ missing     │ missing     │ missing      │ missing             │ missing             │ 41                       │ missing           │ 52                     │ missing                │ 62                          │
 ```
