@@ -7,7 +7,9 @@ using StructArrays
 using Test
 
 @testset "OMOPCommonDataModel.jl" begin
-    @testset "doctests" begin
+    @testset "Unit tests" begin
+    end
+    @testset "Doctests" begin
         doctest(OMOPCommonDataModel)
     end
 end
