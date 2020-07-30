@@ -3,8 +3,6 @@ module OMOPCommonDataModel
 import Dates
 import DocStringExtensions
 
-export CDM_VERSION
-
 abstract type OmopType end
 
 """
