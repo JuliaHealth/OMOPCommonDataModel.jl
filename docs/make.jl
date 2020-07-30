@@ -13,6 +13,7 @@ makedocs(;
     ),
     pages=[
         "Home" => "index.md",
+        "CDM Version" => "version.md",
         "Examples" => "examples.md",
         "API" => "api.md",
     ],
