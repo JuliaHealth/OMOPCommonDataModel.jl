@@ -1,5 +1,6 @@
 using OMOPCommonDataModel
 
+using DataFrames
 using Documenter
 using PrettyPrint
 using StructArrays

@@ -7,9 +7,7 @@ CurrentModule = OMOPCommonDataModel
 ```jldoctest
 julia> using OMOPCommonDataModel
 
-julia> using PrettyPrint
-
-julia> using StructArrays
+julia> using DataFrames, PrettyPrint, StructArrays
 
 julia> jack = Person(person_id = 1, gender_concept_id = 12, year_of_birth = 1900, race_concept_id = 21, ethnicity_concept_id = 31, gender_source_concept_id = 42, race_source_concept_id = 51, ethnicity_source_concept_id = 61)
 Person(1, 12, 1900, missing, missing, missing, missing, 21, 31, missing, missing, missing, missing, missing, 42, missing, 51, missing, 61)
@@ -39,6 +37,7 @@ Person(
   ethnicity_source_value=missing,
   ethnicity_source_concept_id=61,
 )
+
 julia> pprint(jill)
 Person(
   person_id=2,
@@ -61,8 +60,17 @@ Person(
   ethnicity_source_value=missing,
   ethnicity_source_concept_id=62,
 )
-julia> person_table = StructArray([jack, jill])
+
+julia> person_table = StructArray(Person[jack, jill])
 2-element StructArray(::Vector{Int64}, ::Vector{Int64}, ::Vector{Int64}, ::Vector{Union{Missing, Int64}}, ::Vector{Union{Missing, Int64}}, ::Vector{Union{Missing, Dates.DateTime}}, ::Vector{Union{Missing, Dates.DateTime}}, ::Vector{Int64}, ::Vector{Int64}, ::Vector{Union{Missing, Int64}}, ::Vector{Union{Missing, Int64}}, ::Vector{Union{Missing, Int64}}, ::Vector{Union{Missing, String}}, ::Vector{Union{Missing, String}}, ::Vector{Int64}, ::Vector{Union{Missing, String}}, ::Vector{Int64}, ::Vector{Union{Missing, String}}, ::Vector{Int64}) with eltype Person:
  Person(1, 12, 1900, missing, missing, missing, missing, 21, 31, missing, missing, missing, missing, missing, 42, missing, 51, missing, 61)
  Person(2, 11, 1900, 1, 1, missing, missing, 22, 32, missing, missing, missing, missing, missing, 41, missing, 52, missing, 62)
+
+julia> person_table_df = DataFrame(person_table)
+2×19 DataFrame. Omitted printing of 9 columns
+│ Row │ person_id │ gender_concept_id │ year_of_birth │ month_of_birth │ day_of_birth │ birth_datetime │ death_datetime │ race_concept_id │ ethnicity_concept_id │ location_id │
+│     │ Int64     │ Int64             │ Int64         │ Int64?         │ Int64?       │ DateTime…?     │ DateTime…?     │ Int64           │ Int64                │ Int64?      │
+├─────┼───────────┼───────────────────┼───────────────┼────────────────┼──────────────┼────────────────┼────────────────┼─────────────────┼──────────────────────┼─────────────┤
+│ 1   │ 1         │ 12                │ 1900          │ missing        │ missing      │ missing        │ missing        │ 21              │ 31                   │ missing     │
+│ 2   │ 2         │ 11                │ 1900          │ 1              │ 1            │ missing        │ missing        │ 22              │ 32                   │ missing     │
 ```

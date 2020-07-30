@@ -1,9 +1,11 @@
 [deps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 OMOPCommonDataModel = "ba65db9e-6590-4054-ab8a-101ed9124986"
 PrettyPrint = "8162dcfd-2161-5ef2-ae6c-7681170c5f98"
 StructArrays = "09ab397b-f2b6-538f-b94a-2f83cf4a842a"
 
 [compat]
+DataFrames = "0.21"
 PrettyPrint = "0.1"
 StructArrays = "0.4"
