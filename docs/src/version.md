@@ -4,17 +4,34 @@ CurrentModule = OMOPCommonDataModel
 
 # CDM Version
 
-The following table maps the version of OMOPCommonDataModel.jl to the
-corresponding version of the Common Data Model (CDM).
+The following table shows which version of the OMOP Common Data Model (CDM) is
+implemented in each version of the `OMOPCommonDataModel.jl` Julia package.
 
-| OMOPCommonDataModel.jl | CDM    |
-| ---------------------- | ------ |
-| 0.1.0                  | 6.0.0  |
+| Common Data Model (CDM) | `OMOPCommonDataModel.jl` |
+| ----------------------- | ------------------------ |
+| 6.0.0                   | 0.1.0                    |
 
-In order to see the current CDM version, use the `OMOPCommonDataModel.CDM_VERSION` constant:
+In order to see the current CDM version, use the
+`OMOPCommonDataModel.cdm_version` function:
 ```jldoctest
 julia> using OMOPCommonDataModel
 
-julia> OMOPCommonDataModel.CDM_VERSION
+julia> OMOPCommonDataModel.cdm_version()
 v"6.0.0"
 ```
+
+In order to see the current `OMOPCommonDataModel.jl` version, use the
+`OMOPCommonDataModel.cdm_version` function:
+
+```jldoctest
+julia> using OMOPCommonDataModel
+
+julia> OMOPCommonDataModel.version()
+v"0.1.0-DEV"
+```
+
+To see all versions of the Common Data Model, go to the
+[CommonDataModel release page](https://github.com/OHDSI/CommonDataModel/releases).
+
+To see all versions of `OMOPCommonDataModel.jl`, go to the
+[`OMOPCommonDataModel.jl` release page](https://github.com/JuliaHealth/OMOPCommonDataModel.jl/releases).

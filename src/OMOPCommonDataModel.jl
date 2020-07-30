@@ -5,10 +5,8 @@ import DocStringExtensions
 
 abstract type OmopType end
 
-"""
-The version of the OMOP Common Data Model (CDM) being implemented.
-"""
 const CDM_VERSION = v"6.0.0"
+include("version.jl")
 
 # Standardized Vocabularies
 # export Concept
