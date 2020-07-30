@@ -1,6 +1,6 @@
 name = "OMOPCommonDataModel"
 uuid = "ba65db9e-6590-4054-ab8a-101ed9124986"
-authors = ["Dilum Aluthge", "Brown Center for Biomedical Informatics", "JuliaHealth", "and contributors"]
+authors = ["Dilum Aluthge", "Brown Center for Biomedical Informatics", "JuliaHealth", "contributors"]
 version = "0.1.0-DEV"
 
 [deps]
