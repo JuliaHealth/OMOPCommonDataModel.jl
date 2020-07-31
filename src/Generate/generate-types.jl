@@ -68,8 +68,11 @@ end
                                        make_all_fields_optional::Bool)::String where F
     m = match(pattern, str)
     omopname = m[1]
+    _omopname = strip(omopname)
+    _omopname_lowercase = lowercase(_omopname)
+    _omopname_uppercase = uppercase(_omopname)
     @debug("Attempting to create a Julia type for the OMOP CDM table \"$(omopname)\"")
-    structname = string_casing(omopname)
+    structname = string_casing(_omopname)
     fields = String[]
     fieldcontentsraw = m[2]
     lines = strip.(split(strip(fieldcontentsraw), "\n"))
@@ -82,10 +85,15 @@ end
         end
     end
     export_statement = _generate_export_statement(structname, export_structs)
+
     output_lines = vcat(
         String[export_statement],
         String[""],
         String["\"\"\""],
+        String["OMOP table name: $(_omopname)"],
+        String[""],
+        String["Julia struct name: $(structname)"],
+        String[""],
         String["\$(DocStringExtensions.TYPEDEF)"],
         String["\$(DocStringExtensions.TYPEDFIELDS)"],
         String["\"\"\""],
