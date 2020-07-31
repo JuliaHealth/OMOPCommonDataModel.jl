@@ -7,6 +7,10 @@ import DocStringExtensions
 export Concept
 
 """
+OMOP table name: concept
+
+Julia struct name: Concept
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -27,6 +31,10 @@ end
 export Vocabulary
 
 """
+OMOP table name: vocabulary
+
+Julia struct name: Vocabulary
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -42,6 +50,10 @@ end
 export Domain
 
 """
+OMOP table name: domain
+
+Julia struct name: Domain
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -55,6 +67,10 @@ end
 export ConceptClass
 
 """
+OMOP table name: concept_class
+
+Julia struct name: ConceptClass
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -68,6 +84,10 @@ end
 export ConceptRelationship
 
 """
+OMOP table name: concept_relationship
+
+Julia struct name: ConceptRelationship
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -84,6 +104,10 @@ end
 export Relationship
 
 """
+OMOP table name: relationship
+
+Julia struct name: Relationship
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -100,6 +124,10 @@ end
 export ConceptSynonym
 
 """
+OMOP table name: concept_synonym
+
+Julia struct name: ConceptSynonym
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -113,6 +141,10 @@ end
 export ConceptAncestor
 
 """
+OMOP table name: concept_ancestor
+
+Julia struct name: ConceptAncestor
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -127,6 +159,10 @@ end
 export SourceToConceptMap
 
 """
+OMOP table name: source_to_concept_map
+
+Julia struct name: SourceToConceptMap
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -146,6 +182,10 @@ end
 export DrugStrength
 
 """
+OMOP table name: drug_strength
+
+Julia struct name: DrugStrength
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -168,6 +208,10 @@ end
 export CohortDefinition
 
 """
+OMOP table name: cohort_definition
+
+Julia struct name: CohortDefinition
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -185,6 +229,10 @@ end
 export AttributeDefinition
 
 """
+OMOP table name: attribute_definition
+
+Julia struct name: AttributeDefinition
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -200,6 +248,10 @@ end
 export CdmSource
 
 """
+OMOP table name: cdm_source
+
+Julia struct name: CdmSource
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -220,6 +272,10 @@ end
 export Metadata
 
 """
+OMOP table name: metadata
+
+Julia struct name: Metadata
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -237,6 +293,10 @@ end
 export Person
 
 """
+OMOP table name: person
+
+Julia struct name: Person
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -265,6 +325,10 @@ end
 export ObservationPeriod
 
 """
+OMOP table name: observation_period
+
+Julia struct name: ObservationPeriod
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -280,6 +344,10 @@ end
 export Specimen
 
 """
+OMOP table name: specimen
+
+Julia struct name: Specimen
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -305,6 +373,10 @@ end
 export Death
 
 """
+OMOP table name: death
+
+Julia struct name: Death
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -322,6 +394,10 @@ end
 export VisitOccurrence
 
 """
+OMOP table name: visit_occurrence
+
+Julia struct name: VisitOccurrence
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -349,6 +425,10 @@ end
 export VisitDetail
 
 """
+OMOP table name: visit_detail
+
+Julia struct name: VisitDetail
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -378,6 +458,10 @@ end
 export ProcedureOccurrence
 
 """
+OMOP table name: procedure_occurrence
+
+Julia struct name: ProcedureOccurrence
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -402,6 +486,10 @@ end
 export DrugExposure
 
 """
+OMOP table name: drug_exposure
+
+Julia struct name: DrugExposure
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -435,6 +523,10 @@ end
 export DeviceExposure
 
 """
+OMOP table name: device_exposure
+
+Julia struct name: DeviceExposure
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -460,6 +552,10 @@ end
 export ConditionOccurrence
 
 """
+OMOP table name: condition_occurrence
+
+Julia struct name: ConditionOccurrence
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -486,6 +582,10 @@ end
 export Measurement
 
 """
+OMOP table name: measurement
+
+Julia struct name: Measurement
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -516,6 +616,10 @@ end
 export Note
 
 """
+OMOP table name: note
+
+Julia struct name: Note
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -540,6 +644,10 @@ end
 export NoteNlp
 
 """
+OMOP table name: note_nlp
+
+Julia struct name: NoteNlp
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -564,6 +672,10 @@ end
 export Observation
 
 """
+OMOP table name: observation
+
+Julia struct name: Observation
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -592,6 +704,10 @@ end
 export FactRelationship
 
 """
+OMOP table name: fact_relationship
+
+Julia struct name: FactRelationship
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -607,6 +723,10 @@ end
 export Location
 
 """
+OMOP table name: location
+
+Julia struct name: Location
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -625,6 +745,10 @@ end
 export CareSite
 
 """
+OMOP table name: care_site
+
+Julia struct name: CareSite
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -641,6 +765,10 @@ end
 export Provider
 
 """
+OMOP table name: provider
+
+Julia struct name: Provider
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -664,6 +792,10 @@ end
 export PayerPlanPeriod
 
 """
+OMOP table name: payer_plan_period
+
+Julia struct name: PayerPlanPeriod
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -691,6 +823,10 @@ end
 export Cost
 
 """
+OMOP table name: cost
+
+Julia struct name: Cost
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -723,6 +859,10 @@ end
 export Cohort
 
 """
+OMOP table name: cohort
+
+Julia struct name: Cohort
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -737,6 +877,10 @@ end
 export CohortAttribute
 
 """
+OMOP table name: cohort_attribute
+
+Julia struct name: CohortAttribute
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -754,6 +898,10 @@ end
 export DrugEra
 
 """
+OMOP table name: drug_era
+
+Julia struct name: DrugEra
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -771,6 +919,10 @@ end
 export DoseEra
 
 """
+OMOP table name: dose_era
+
+Julia struct name: DoseEra
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
@@ -788,6 +940,10 @@ end
 export ConditionEra
 
 """
+OMOP table name: condition_era
+
+Julia struct name: ConditionEra
+
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
