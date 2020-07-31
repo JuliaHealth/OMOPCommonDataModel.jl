@@ -27,7 +27,7 @@ In order to see the current `OMOPCommonDataModel.jl` version, use the
 julia> using OMOPCommonDataModel
 
 julia> OMOPCommonDataModel.version()
-v"0.1.0-DEV"
+v"0.1.0"
 ```
 
 To see all versions of the Common Data Model, go to the
