@@ -7,14 +7,14 @@ import DocStringExtensions
 export Concept
 
 """
-OMOP table name: concept
+CDM table name: CONCEPT
 
 Julia struct name: Concept
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct Concept <: OMOPType
+Base.@kwdef struct Concept <: CDMType
     concept_id::Int
     concept_name::String
     domain_id::String
@@ -31,14 +31,14 @@ end
 export Vocabulary
 
 """
-OMOP table name: vocabulary
+CDM table name: VOCABULARY
 
 Julia struct name: Vocabulary
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct Vocabulary <: OMOPType
+Base.@kwdef struct Vocabulary <: CDMType
     vocabulary_id::String
     vocabulary_name::String
     vocabulary_reference::String
@@ -50,14 +50,14 @@ end
 export Domain
 
 """
-OMOP table name: domain
+CDM table name: DOMAIN
 
 Julia struct name: Domain
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct Domain <: OMOPType
+Base.@kwdef struct Domain <: CDMType
     domain_id::String
     domain_name::String
     domain_concept_id::Int
@@ -67,14 +67,14 @@ end
 export ConceptClass
 
 """
-OMOP table name: concept_class
+CDM table name: CONCEPT_CLASS
 
 Julia struct name: ConceptClass
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct ConceptClass <: OMOPType
+Base.@kwdef struct ConceptClass <: CDMType
     concept_class_id::String
     concept_class_name::String
     concept_class_concept_id::Int
@@ -84,14 +84,14 @@ end
 export ConceptRelationship
 
 """
-OMOP table name: concept_relationship
+CDM table name: CONCEPT_RELATIONSHIP
 
 Julia struct name: ConceptRelationship
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct ConceptRelationship <: OMOPType
+Base.@kwdef struct ConceptRelationship <: CDMType
     concept_id_1::Int
     concept_id_2::Int
     relationship_id::String
@@ -104,14 +104,14 @@ end
 export Relationship
 
 """
-OMOP table name: relationship
+CDM table name: RELATIONSHIP
 
 Julia struct name: Relationship
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct Relationship <: OMOPType
+Base.@kwdef struct Relationship <: CDMType
     relationship_id::String
     relationship_name::String
     is_hierarchical::String
@@ -124,14 +124,14 @@ end
 export ConceptSynonym
 
 """
-OMOP table name: concept_synonym
+CDM table name: CONCEPT_SYNONYM
 
 Julia struct name: ConceptSynonym
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct ConceptSynonym <: OMOPType
+Base.@kwdef struct ConceptSynonym <: CDMType
     concept_id::Int
     concept_synonym_name::String
     language_concept_id::Int
@@ -141,14 +141,14 @@ end
 export ConceptAncestor
 
 """
-OMOP table name: concept_ancestor
+CDM table name: CONCEPT_ANCESTOR
 
 Julia struct name: ConceptAncestor
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct ConceptAncestor <: OMOPType
+Base.@kwdef struct ConceptAncestor <: CDMType
     ancestor_concept_id::Int
     descendant_concept_id::Int
     min_levels_of_separation::Int
@@ -159,14 +159,14 @@ end
 export SourceToConceptMap
 
 """
-OMOP table name: source_to_concept_map
+CDM table name: SOURCE_TO_CONCEPT_MAP
 
 Julia struct name: SourceToConceptMap
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct SourceToConceptMap <: OMOPType
+Base.@kwdef struct SourceToConceptMap <: CDMType
     source_code::String
     source_concept_id::Int
     source_vocabulary_id::String
@@ -182,14 +182,14 @@ end
 export DrugStrength
 
 """
-OMOP table name: drug_strength
+CDM table name: DRUG_STRENGTH
 
 Julia struct name: DrugStrength
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct DrugStrength <: OMOPType
+Base.@kwdef struct DrugStrength <: CDMType
     drug_concept_id::Int
     ingredient_concept_id::Int
     amount_value::Union{Float64, Missing} = missing
@@ -208,14 +208,14 @@ end
 export CohortDefinition
 
 """
-OMOP table name: cohort_definition
+CDM table name: COHORT_DEFINITION
 
 Julia struct name: CohortDefinition
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct CohortDefinition <: OMOPType
+Base.@kwdef struct CohortDefinition <: CDMType
     cohort_definition_id::Int
     cohort_definition_name::String
     cohort_definition_description::Union{String, Missing} = missing
@@ -229,14 +229,14 @@ end
 export AttributeDefinition
 
 """
-OMOP table name: attribute_definition
+CDM table name: ATTRIBUTE_DEFINITION
 
 Julia struct name: AttributeDefinition
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct AttributeDefinition <: OMOPType
+Base.@kwdef struct AttributeDefinition <: CDMType
     attribute_definition_id::Int
     attribute_name::String
     attribute_description::Union{String, Missing} = missing
@@ -248,14 +248,14 @@ end
 export CdmSource
 
 """
-OMOP table name: cdm_source
+CDM table name: CDM_SOURCE
 
 Julia struct name: CdmSource
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct CdmSource <: OMOPType
+Base.@kwdef struct CdmSource <: CDMType
     cdm_source_name::String
     cdm_source_abbreviation::Union{String, Missing} = missing
     cdm_holder::Union{String, Missing} = missing
@@ -272,14 +272,14 @@ end
 export Metadata
 
 """
-OMOP table name: metadata
+CDM table name: METADATA
 
 Julia struct name: Metadata
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct Metadata <: OMOPType
+Base.@kwdef struct Metadata <: CDMType
     metadata_concept_id::Int
     metadata_type_concept_id::Int
     name::String
@@ -293,14 +293,14 @@ end
 export Person
 
 """
-OMOP table name: person
+CDM table name: PERSON
 
 Julia struct name: Person
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct Person <: OMOPType
+Base.@kwdef struct Person <: CDMType
     person_id::Int
     gender_concept_id::Int
     year_of_birth::Int
@@ -325,14 +325,14 @@ end
 export ObservationPeriod
 
 """
-OMOP table name: observation_period
+CDM table name: OBSERVATION_PERIOD
 
 Julia struct name: ObservationPeriod
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct ObservationPeriod <: OMOPType
+Base.@kwdef struct ObservationPeriod <: CDMType
     observation_period_id::Int
     person_id::Int
     observation_period_start_date::Dates.DateTime
@@ -344,14 +344,14 @@ end
 export Specimen
 
 """
-OMOP table name: specimen
+CDM table name: SPECIMEN
 
 Julia struct name: Specimen
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct Specimen <: OMOPType
+Base.@kwdef struct Specimen <: CDMType
     specimen_id::Int
     person_id::Int
     specimen_concept_id::Int
@@ -373,14 +373,14 @@ end
 export Death
 
 """
-OMOP table name: death
+CDM table name: DEATH
 
 Julia struct name: Death
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct Death <: OMOPType
+Base.@kwdef struct Death <: CDMType
     person_id::Int
     death_date::Dates.DateTime
     death_datetime::Union{Dates.DateTime, Missing} = missing
@@ -394,14 +394,14 @@ end
 export VisitOccurrence
 
 """
-OMOP table name: visit_occurrence
+CDM table name: VISIT_OCCURRENCE
 
 Julia struct name: VisitOccurrence
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct VisitOccurrence <: OMOPType
+Base.@kwdef struct VisitOccurrence <: CDMType
     visit_occurrence_id::Int
     person_id::Int
     visit_concept_id::Int
@@ -425,14 +425,14 @@ end
 export VisitDetail
 
 """
-OMOP table name: visit_detail
+CDM table name: VISIT_DETAIL
 
 Julia struct name: VisitDetail
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct VisitDetail <: OMOPType
+Base.@kwdef struct VisitDetail <: CDMType
     visit_detail_id::Int
     person_id::Int
     visit_detail_concept_id::Int
@@ -458,14 +458,14 @@ end
 export ProcedureOccurrence
 
 """
-OMOP table name: procedure_occurrence
+CDM table name: PROCEDURE_OCCURRENCE
 
 Julia struct name: ProcedureOccurrence
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct ProcedureOccurrence <: OMOPType
+Base.@kwdef struct ProcedureOccurrence <: CDMType
     procedure_occurrence_id::Int
     person_id::Int
     procedure_concept_id::Int
@@ -486,14 +486,14 @@ end
 export DrugExposure
 
 """
-OMOP table name: drug_exposure
+CDM table name: DRUG_EXPOSURE
 
 Julia struct name: DrugExposure
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct DrugExposure <: OMOPType
+Base.@kwdef struct DrugExposure <: CDMType
     drug_exposure_id::Int
     person_id::Int
     drug_concept_id::Int
@@ -523,14 +523,14 @@ end
 export DeviceExposure
 
 """
-OMOP table name: device_exposure
+CDM table name: DEVICE_EXPOSURE
 
 Julia struct name: DeviceExposure
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct DeviceExposure <: OMOPType
+Base.@kwdef struct DeviceExposure <: CDMType
     device_exposure_id::Int
     person_id::Int
     device_concept_id::Int
@@ -552,14 +552,14 @@ end
 export ConditionOccurrence
 
 """
-OMOP table name: condition_occurrence
+CDM table name: CONDITION_OCCURRENCE
 
 Julia struct name: ConditionOccurrence
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct ConditionOccurrence <: OMOPType
+Base.@kwdef struct ConditionOccurrence <: CDMType
     condition_occurrence_id::Int
     person_id::Int
     condition_concept_id::Int
@@ -582,14 +582,14 @@ end
 export Measurement
 
 """
-OMOP table name: measurement
+CDM table name: MEASUREMENT
 
 Julia struct name: Measurement
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct Measurement <: OMOPType
+Base.@kwdef struct Measurement <: CDMType
     measurement_id::Int
     person_id::Int
     measurement_concept_id::Int
@@ -616,14 +616,14 @@ end
 export Note
 
 """
-OMOP table name: note
+CDM table name: NOTE
 
 Julia struct name: Note
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct Note <: OMOPType
+Base.@kwdef struct Note <: CDMType
     note_id::Int
     person_id::Int
     note_date::Dates.DateTime
@@ -644,14 +644,14 @@ end
 export NoteNlp
 
 """
-OMOP table name: note_nlp
+CDM table name: NOTE_NLP
 
 Julia struct name: NoteNlp
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct NoteNlp <: OMOPType
+Base.@kwdef struct NoteNlp <: CDMType
     note_nlp_id::Int
     note_id::Int
     section_concept_id::Union{Int, Missing} = missing
@@ -672,14 +672,14 @@ end
 export Observation
 
 """
-OMOP table name: observation
+CDM table name: OBSERVATION
 
 Julia struct name: Observation
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct Observation <: OMOPType
+Base.@kwdef struct Observation <: CDMType
     observation_id::Int
     person_id::Int
     observation_concept_id::Int
@@ -704,14 +704,14 @@ end
 export FactRelationship
 
 """
-OMOP table name: fact_relationship
+CDM table name: FACT_RELATIONSHIP
 
 Julia struct name: FactRelationship
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct FactRelationship <: OMOPType
+Base.@kwdef struct FactRelationship <: CDMType
     domain_concept_id_1::Int
     fact_id_1::Int
     domain_concept_id_2::Int
@@ -723,14 +723,14 @@ end
 export Location
 
 """
-OMOP table name: location
+CDM table name: LOCATION
 
 Julia struct name: Location
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct Location <: OMOPType
+Base.@kwdef struct Location <: CDMType
     location_id::Int
     address_1::Union{String, Missing} = missing
     address_2::Union{String, Missing} = missing
@@ -745,14 +745,14 @@ end
 export CareSite
 
 """
-OMOP table name: care_site
+CDM table name: CARE_SITE
 
 Julia struct name: CareSite
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct CareSite <: OMOPType
+Base.@kwdef struct CareSite <: CDMType
     care_site_id::Int
     care_site_name::Union{String, Missing} = missing
     place_of_service_concept_id::Union{Int, Missing} = missing
@@ -765,14 +765,14 @@ end
 export Provider
 
 """
-OMOP table name: provider
+CDM table name: PROVIDER
 
 Julia struct name: Provider
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct Provider <: OMOPType
+Base.@kwdef struct Provider <: CDMType
     provider_id::Int
     provider_name::Union{String, Missing} = missing
     NPI::Union{String, Missing} = missing
@@ -792,14 +792,14 @@ end
 export PayerPlanPeriod
 
 """
-OMOP table name: payer_plan_period
+CDM table name: PAYER_PLAN_PERIOD
 
 Julia struct name: PayerPlanPeriod
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct PayerPlanPeriod <: OMOPType
+Base.@kwdef struct PayerPlanPeriod <: CDMType
     payer_plan_period_id::Int
     person_id::Int
     payer_plan_period_start_date::Dates.DateTime
@@ -823,14 +823,14 @@ end
 export Cost
 
 """
-OMOP table name: cost
+CDM table name: COST
 
 Julia struct name: Cost
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct Cost <: OMOPType
+Base.@kwdef struct Cost <: CDMType
     cost_id::Int
     cost_event_id::Int
     cost_domain_id::String
@@ -859,14 +859,14 @@ end
 export Cohort
 
 """
-OMOP table name: cohort
+CDM table name: COHORT
 
 Julia struct name: Cohort
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct Cohort <: OMOPType
+Base.@kwdef struct Cohort <: CDMType
     cohort_definition_id::Int
     subject_id::Int
     cohort_start_date::Dates.DateTime
@@ -877,14 +877,14 @@ end
 export CohortAttribute
 
 """
-OMOP table name: cohort_attribute
+CDM table name: COHORT_ATTRIBUTE
 
 Julia struct name: CohortAttribute
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct CohortAttribute <: OMOPType
+Base.@kwdef struct CohortAttribute <: CDMType
     cohort_definition_id::Int
     subject_id::Int
     cohort_start_date::Dates.DateTime
@@ -898,14 +898,14 @@ end
 export DrugEra
 
 """
-OMOP table name: drug_era
+CDM table name: DRUG_ERA
 
 Julia struct name: DrugEra
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct DrugEra <: OMOPType
+Base.@kwdef struct DrugEra <: CDMType
     drug_era_id::Int
     person_id::Int
     drug_concept_id::Int
@@ -919,14 +919,14 @@ end
 export DoseEra
 
 """
-OMOP table name: dose_era
+CDM table name: DOSE_ERA
 
 Julia struct name: DoseEra
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct DoseEra <: OMOPType
+Base.@kwdef struct DoseEra <: CDMType
     dose_era_id::Int
     person_id::Int
     drug_concept_id::Int
@@ -940,14 +940,14 @@ end
 export ConditionEra
 
 """
-OMOP table name: condition_era
+CDM table name: CONDITION_ERA
 
 Julia struct name: ConditionEra
 
 $(DocStringExtensions.TYPEDEF)
 $(DocStringExtensions.TYPEDFIELDS)
 """
-Base.@kwdef struct ConditionEra <: OMOPType
+Base.@kwdef struct ConditionEra <: CDMType
     condition_era_id::Int
     person_id::Int
     condition_concept_id::Int

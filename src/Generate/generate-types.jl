@@ -67,12 +67,12 @@ end
                                        export_structs::Bool,
                                        make_all_fields_optional::Bool)::String where F
     m = match(pattern, str)
-    omopname = m[1]
-    _omopname = strip(omopname)
-    _omopname_lowercase = lowercase(_omopname)
-    _omopname_uppercase = uppercase(_omopname)
-    @debug("Attempting to create a Julia type for the OMOP CDM table \"$(omopname)\"")
-    structname = string_casing(_omopname)
+    cdmname = m[1]
+    _cdmname = strip(cdmname)
+    _cdmname_lowercase = lowercase(_cdmname)
+    _cdmname_uppercase = uppercase(_cdmname)
+    @debug("Attempting to create a Julia type for the OMOP CDM table \"$(cdmname)\"")
+    structname = string_casing(_cdmname)
     fields = String[]
     fieldcontentsraw = m[2]
     lines = strip.(split(strip(fieldcontentsraw), "\n"))
@@ -90,19 +90,19 @@ end
         String[export_statement],
         String[""],
         String["\"\"\""],
-        String["OMOP table name: $(_omopname)"],
+        String["CDM table name: $(_cdmname_uppercase)"],
         String[""],
         String["Julia struct name: $(structname)"],
         String[""],
         String["\$(DocStringExtensions.TYPEDEF)"],
         String["\$(DocStringExtensions.TYPEDFIELDS)"],
         String["\"\"\""],
-        String["Base.@kwdef struct $(structname) <: OMOPType"],
+        String["Base.@kwdef struct $(structname) <: CDMType"],
         fields,
         String["end"],
     )
     output = join(output_lines, "\n")
-    @debug("The OMOP CDM table \"$(omopname)\" will become the Julia struct `$(structname)`")
+    @debug("The OMOP CDM table \"$(cdmname)\" will become the Julia struct `$(structname)`")
     return output
 end
 
@@ -113,9 +113,9 @@ end
     m = match(pattern, _line)
     field_name = m[1]
     _field_name = strip(strip(strip(field_name), Char['\"']))
-    field_omop_type = m[2]
+    field_cdm_type = m[2]
     field_null_or_notnull = m[3]
-    field_partialtype = _omop_type_to_julia_partialtype(field_omop_type)
+    field_partialtype = _cdm_type_to_julia_partialtype(field_cdm_type)
     field_fulltype = _generate_full_fieldtype(field_partialtype,
                                               field_null_or_notnull;
                                               make_all_fields_optional = make_all_fields_optional)
@@ -123,23 +123,23 @@ end
     return result
 end
 
-@inline function _omop_type_to_julia_partialtype(omop_type)::String
+@inline function _cdm_type_to_julia_partialtype(cdm_type)::String
     varchar_pattern = r"^varchar\([\d]*?\)$"i
-    _omop_type = lowercase(strip(omop_type))
-    if _omop_type == "integer"
+    _cdm_type = lowercase(strip(cdm_type))
+    if _cdm_type == "integer"
         return "Int"
-    elseif _omop_type == "date"
+    elseif _cdm_type == "date"
         return "Dates.DateTime"
-    elseif _omop_type == "datetime2"
+    elseif _cdm_type == "datetime2"
         return "Dates.DateTime"
-    elseif _omop_type == "float"
+    elseif _cdm_type == "float"
         return "Float64"
-    elseif _omop_type == "varchar(max)"
+    elseif _cdm_type == "varchar(max)"
         return "String"
-    elseif occursin(varchar_pattern, _omop_type)
+    elseif occursin(varchar_pattern, _cdm_type)
         return "String"
     end
-    throw(ArgumentError("Invalid value for omop_type: $(omop_type)"))
+    throw(ArgumentError("Invalid value for cdm_type: $(cdm_type)"))
 end
 
 @inline function _generate_full_fieldtype(partial_fieldtype,

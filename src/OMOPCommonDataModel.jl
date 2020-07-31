@@ -3,12 +3,12 @@ module OMOPCommonDataModel
 import Dates
 import DocStringExtensions
 
-export OMOPType
+export CDMType
 
 """
 An OMOP Common Data Model (CDM) type.
 """
-abstract type OMOPType end
+abstract type CDMType end
 
 const CDM_VERSION = v"5.1.3"
 include("version.jl")
