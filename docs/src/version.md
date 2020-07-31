@@ -9,7 +9,7 @@ implemented in each version of the `OMOPCommonDataModel.jl` Julia package.
 
 | Common Data Model (CDM) | `OMOPCommonDataModel.jl` |
 | ----------------------- | ------------------------ |
-| 6.0.0                   | 0.1.0                    |
+| 5.1.3                   | 0.1.0                    |
 
 In order to see the current CDM version, use the
 `OMOPCommonDataModel.cdm_version` function:
@@ -17,7 +17,7 @@ In order to see the current CDM version, use the
 julia> using OMOPCommonDataModel
 
 julia> OMOPCommonDataModel.cdm_version()
-v"6.0.0"
+v"5.1.3"
 ```
 
 In order to see the current `OMOPCommonDataModel.jl` version, use the

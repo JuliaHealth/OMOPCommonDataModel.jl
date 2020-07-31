@@ -16,6 +16,7 @@ makedocs(;
         "CDM Version" => "version.md",
         "Examples" => "examples.md",
         "API" => "api.md",
+        "Auto-Generation" => "generate.md",
     ],
     strict=true,
 )
