@@ -72,10 +72,10 @@ using Test
                 @test_throws ArgumentError OMOPCommonDataModel.Generate._cdm_type_to_julia_partialtype("foo_bar")
             end
             @testset "_generate_full_fieldtype" begin
-                @test OMOPCommonDataModel.Generate._generate_full_fieldtype("SomeType", "NULL"; make_all_fields_optional = true) == "Union{SomeType, Missing} = missing"
-                @test OMOPCommonDataModel.Generate._generate_full_fieldtype("SomeType", "NOT NULL"; make_all_fields_optional = true) == "Union{SomeType, Missing} = missing"
-                @test OMOPCommonDataModel.Generate._generate_full_fieldtype("SomeType", "NULL"; make_all_fields_optional = false) == "Union{SomeType, Missing} = missing"
-                @test OMOPCommonDataModel.Generate._generate_full_fieldtype("SomeType", "NOT NULL"; make_all_fields_optional = false) == "SomeType"
+                @test OMOPCommonDataModel.Generate._generate_full_fieldtype("SomeType", "NULL"; make_all_fields_optional = true) == "Union{SomeType, Missing} = missing # optional"
+                @test OMOPCommonDataModel.Generate._generate_full_fieldtype("SomeType", "NOT NULL"; make_all_fields_optional = true) == "Union{SomeType, Missing} = missing # required"
+                @test OMOPCommonDataModel.Generate._generate_full_fieldtype("SomeType", "NULL"; make_all_fields_optional = false) == "Union{SomeType, Missing} = missing # optional"
+                @test OMOPCommonDataModel.Generate._generate_full_fieldtype("SomeType", "NOT NULL"; make_all_fields_optional = false) == "SomeType # required"
                 @test_throws ArgumentError OMOPCommonDataModel.Generate._generate_full_fieldtype("SomeType", "FOO BAR"; make_all_fields_optional = false)
             end
         end
