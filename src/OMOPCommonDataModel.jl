@@ -10,7 +10,7 @@ An OMOP Common Data Model (CDM) type.
 """
 abstract type CDMType end
 
-const CDM_VERSION = v"5.1.3"
+const CDM_VERSION = v"5.3.1"
 include("version.jl")
 
 include("Generate/Generate.jl")
