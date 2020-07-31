@@ -68,8 +68,8 @@ using Test
                 @test OMOPCommonDataModel.Generate._generate_export_statement("Foo", true) == "export Foo"
                 @test OMOPCommonDataModel.Generate._generate_export_statement("Foo", false) == ""
             end
-            @testset "_omop_type_to_julia_partialtype" begin
-                @test_throws ArgumentError OMOPCommonDataModel.Generate._omop_type_to_julia_partialtype("foo_bar")
+            @testset "_cdm_type_to_julia_partialtype" begin
+                @test_throws ArgumentError OMOPCommonDataModel.Generate._cdm_type_to_julia_partialtype("foo_bar")
             end
             @testset "_generate_full_fieldtype" begin
                 @test OMOPCommonDataModel.Generate._generate_full_fieldtype("SomeType", "NULL"; make_all_fields_optional = true) == "Union{SomeType, Missing} = missing"

@@ -1,7 +1,7 @@
 import Pkg
 
 """
-The version of the OMOPCommonDataModel.jl package.
+The version of the `OMOPCommonDataModel.jl` Julia package.
 """
 function version()::VersionNumber
     package_directory = dirname(dirname(@__FILE__))
