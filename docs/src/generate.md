@@ -27,10 +27,6 @@ julia> OMOPCommonDataModel.Generate.generate() # this will write the generated s
 
 ## Generate API
 
-
-```@index
-```
-
 ```@autodocs
 Modules = [OMOPCommonDataModel.Generate]
 ```
