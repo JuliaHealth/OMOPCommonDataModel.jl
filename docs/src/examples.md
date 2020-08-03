@@ -7,7 +7,7 @@ CurrentModule = OMOPCommonDataModel
 ```jldoctest
 julia> using OMOPCommonDataModel
 
-julia> using DataFrames, PrettyPrint, StructArrays
+julia> using DataFrames, PrettyPrint, StructArrays, Tables
 
 julia> jack = Person(person_id = 1, gender_concept_id = 12, year_of_birth = 1900, race_concept_id = 21, ethnicity_concept_id = 31, gender_source_concept_id = 42, race_source_concept_id = 51, ethnicity_source_concept_id = 61)
 Person(1, 12, 1900, missing, missing, missing, 21, 31, missing, missing, missing, missing, missing, 42, missing, 51, missing, 61)
