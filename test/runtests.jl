@@ -4,6 +4,7 @@ using DataFrames
 using Documenter
 using PrettyPrint
 using StructArrays
+using Tables
 using Test
 
 @testset "OMOPCommonDataModel.jl" begin
