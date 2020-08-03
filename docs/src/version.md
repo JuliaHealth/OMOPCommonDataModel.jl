@@ -21,7 +21,7 @@ v"5.3.1"
 ```
 
 In order to see the current `OMOPCommonDataModel.jl` version, use the
-`OMOPCommonDataModel.cdm_version` function:
+`OMOPCommonDataModel.version` function:
 
 ```jldoctest
 julia> using OMOPCommonDataModel
