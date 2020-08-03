@@ -13,21 +13,15 @@ implemented in each version of the `OMOPCommonDataModel.jl` Julia package.
 
 In order to see the current CDM version, use the
 `OMOPCommonDataModel.cdm_version` function:
-```jldoctest
-julia> using OMOPCommonDataModel
-
-julia> OMOPCommonDataModel.cdm_version()
-v"5.3.1"
+```julia
+julia> OMOPCommonDataModel.cdm_version() # prints the current CDM version
 ```
 
 In order to see the current `OMOPCommonDataModel.jl` version, use the
 `OMOPCommonDataModel.version` function:
 
-```jldoctest
-julia> using OMOPCommonDataModel
-
-julia> OMOPCommonDataModel.version()
-v"0.1.1"
+```julia
+julia> OMOPCommonDataModel.version() # prints the current `OMOPCommonDataModel.jl` version
 ```
 
 To see all versions of the Common Data Model, go to the
