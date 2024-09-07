@@ -15,5 +15,5 @@ end
 The version of the OMOP Common Data Model (CDM) being implemented.
 """
 @inline function cdm_version()::VersionNumber
-    return CDM_VERSION
+    return OMOP_CDM_VERSION
 end
