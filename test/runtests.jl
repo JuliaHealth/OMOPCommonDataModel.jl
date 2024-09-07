@@ -14,7 +14,7 @@ using Test
             @test OMOPCommonDataModel.version() > v"0"
             @test OMOPCommonDataModel.cdm_version() isa VersionNumber
             @test OMOPCommonDataModel.cdm_version() > v"0"
-            @test OMOPCommonDataModel.cdm_version() == OMOPCommonDataModel.CDM_VERSION
+            @test OMOPCommonDataModel.cdm_version() == OMOPCommonDataModel.OMOP_CDM_VERSION
         end
         @testset "String casing" begin
             @testset "pascalcase" begin

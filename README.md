@@ -9,6 +9,9 @@ Pure Julia implementation of the [OMOP Common Data Model (CDM)](https://github.c
 
 Please see the [documentation](https://JuliaHealth.github.io/OMOPCommonDataModel.jl/stable).
 
+OMOP CDM versions 5.4.1 and 5.3.1 are supported.
+The value for `OMOP_CDM_VERSION` is read from the Julia environment, with `v5.4.1` being the default value.
+
 ## Example
 ```julia
 using CSV, DataFrames, OMOPCommonDataModel
