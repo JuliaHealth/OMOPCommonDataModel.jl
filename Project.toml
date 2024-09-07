@@ -1,18 +1,19 @@
 name = "OMOPCommonDataModel"
 uuid = "ba65db9e-6590-4054-ab8a-101ed9124986"
 authors = ["Dilum Aluthge", "Brown Center for Biomedical Informatics", "JuliaHealth", "contributors"]
-version = "0.1.4"
+version = "0.2.0"
 
 [deps]
 Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
 DocStringExtensions = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
 Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+PrettyPrint = "8162dcfd-2161-5ef2-ae6c-7681170c5f98"
 
 [compat]
-DataFrames = "0.21"
-DocStringExtensions = "0.8"
+DataFrames = "1"
+DocStringExtensions = "0.8, 0.9"
 PrettyPrint = "0.2"
-StructArrays = "0.4"
+StructArrays = "0.4, 0.5, 0.6"
 Tables = "1"
 julia = "1.1"
 
