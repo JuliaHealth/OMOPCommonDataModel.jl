@@ -1,1 +1,1 @@
-const CDM_VERSION = v"5.3.1"
+const OMOP_CDM_VERSION = get(ENV, "OMOP_CDM_VERSION", v"5.4.1")
