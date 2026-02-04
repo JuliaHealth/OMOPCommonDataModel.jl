@@ -18,7 +18,6 @@ makedocs(;
         "API" => "api.md",
         "Auto-Generation" => "generate.md",
     ],
-    strict=true,
 )
 
 deploydocs(;
